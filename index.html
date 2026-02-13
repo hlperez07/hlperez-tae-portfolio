@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="QA Automation Portfolio - Sauce Demo Testing Project by Henry Perez">
+    <meta name="author" content="Henry Perez">
+    <title>🧪 Henry Perez - QA Automation Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧪</text></svg>">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="main-title">🧪 HENRY PEREZ - QA AUTOMATION PORTFOLIO</h1>
+                <p class="subtitle">Test Automation Engineer | Playwright | CI/CD | TypeScript | Multi-Environment Testing</p>
+                <div class="badges">
+                    <span class="badge">Playwright</span>
+                    <span class="badge">TypeScript</span>
+                    <span class="badge">GitHub Actions</span>
+                    <span class="badge">Page Object Model</span>
+                    <span class="badge">Multi-Environment</span>
+                    <span class="badge">E2E Testing</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="section-title">Complete Automated Testing Suite</h2>
+                <p class="hero-description">
+                    Comprehensive end-to-end test automation suite for Sauce Demo e-commerce application. 
+                    Implements industry best practices with Page Object Model, multi-environment support (QA/PROD), 
+                    CI/CD pipeline, and detailed reporting.
+                </p>
+                <div class="hero-links">
+                    <a href="https://github.com/hlperez07/hlperez-tae-portafolio" class="btn btn-primary" target="_blank">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                        View on GitHub
+                    </a>
+                    <a href="#documentation" class="btn btn-secondary">View Documentation</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="code-preview">
+                    <div class="code-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="filename">auth.spec.ts</span>
+                    </div>
+                    <pre><code>test('TC-AUTH-001: Login successful @qa @prod', async ({ page }) => {
+  await loginPage.login('standard_user', 'secret_sauce');
+  
+  await expect(page).toHaveURL(/.*inventory/);
+  await expect(inventoryPage.pageTitle).toHaveText('Products');
+  
+  const productCount = await inventoryPage.getProductCount();
+  expect(productCount).toBe(6);
+});</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Environment Section -->
+    <section class="environments">
+        <div class="container">
+            <h2 class="section-title">Multi-Environment Testing</h2>
+            <p class="section-description">
+                Configured for testing in both QA and Production environments with environment-specific test execution
+            </p>
+            <div class="env-grid">
+                <div class="env-card">
+                    <div class="env-icon">🧪</div>
+                    <h3>QA Environment</h3>
+                    <p>Test execution in QA environment with full regression suite</p>
+                    <div class="env-command">
+                        <code>npm run test:qa</code>
+                    </div>
+                    <ul class="env-features">
+                        <li>✅ Full test suite execution</li>
+                        <li>✅ Smoke & Regression tests</li>
+                        <li>✅ Higher retry tolerance</li>
+                    </ul>
+                </div>
+                <div class="env-card">
+                    <div class="env-icon">🚀</div>
+                    <h3>Production Environment</h3>
+                    <p>Controlled test execution in Production with smoke tests</p>
+                    <div class="env-command">
+                        <code>npm run test:prod</code>
+                    </div>
+                    <ul class="env-features">
+                        <li>✅ Smoke tests priority</li>
+                        <li>✅ Critical path validation</li>
+                        <li>✅ Lower retry count</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">46</div>
+                    <div class="stat-label">Test Cases</div>
+                    <div class="stat-sublabel">Automated test cases</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">92%</div>
+                    <div class="stat-label">Pass Rate</div>
+                    <div class="stat-sublabel">Success rate</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Environments</div>
+                    <div class="stat-sublabel">QA & Production</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Browsers</div>
+                    <div class="stat-sublabel">Chrome, Firefox, Safari</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="documentation" class="features">
+        <div class="container">
+            <h2 class="section-title">Documentation and Resources</h2>
+            <p class="section-description">
+                Complete project documentation, from strategy to implementation
+            </p>
+
+            <div class="features-grid">
+                <!-- Test Strategy -->
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3 class="feature-title">Test Strategy</h3>
+                    <p class="feature-description">
+                        Complete testing strategy with objectives, scope, test levels, and success metrics
+                    </p>
+                    <ul class="feature-list">
+                        <li>Objectives and metrics</li>
+                        <li>Scope and coverage</li>
+                        <li>Tools and frameworks</li>
+                        <li>Entry/Exit criteria</li>
+                    </ul>
+                    <a href="docs/test-strategy.md" class="feature-link">View Strategy →</a>
+                </div>
+
+                <!-- Test Cases -->
+                <div class="feature-card">
+                    <div class="feature-icon">✅</div>
+                    <h3 class="feature-title">Test Cases</h3>
+                    <p class="feature-description">
+                        46 documented test cases covering authentication, products, cart, and checkout
+                    </p>
+                    <ul class="feature-list">
+                        <li>10 authentication cases</li>
+                        <li>11 product cases</li>
+                        <li>12 shopping cart cases</li>
+                        <li>13 checkout cases</li>
+                    </ul>
+                    <a href="docs/test-cases.md" class="feature-link">View Cases →</a>
+                </div>
+
+                <!-- Automation Code -->
+                <div class="feature-card">
+                    <div class="feature-icon">🎭</div>
+                    <h3 class="feature-title">Playwright Tests</h3>
+                    <p class="feature-description">
+                        Automated tests with Playwright using TypeScript and Page Object Model
+                    </p>
+                    <ul class="feature-list">
+                        <li>Page Object Model</li>
+                        <li>Complete E2E tests</li>
+                        <li>Cross-browser testing</li>
+                        <li>Screenshots & videos</li>
+                    </ul>
+                    <a href="https://github.com/hlperez07/hlperez-tae-portafolio/tree/main/tests" class="feature-link">View Code →</a>
+                </div>
+
+                <!-- CI/CD -->
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3 class="feature-title">CI/CD Pipeline</h3>
+                    <p class="feature-description">
+                        Automated pipeline with GitHub Actions running tests on every commit
+                    </p>
+                    <ul class="feature-list">
+                        <li>Auto tests on PR</li>
+                        <li>3-browser execution</li>
+                        <li>Automated reports</li>
+                        <li>Environment support</li>
+                    </ul>
+                    <a href="https://github.com/hlperez07/hlperez-tae-portafolio/actions" class="feature-link">View Pipeline →</a>
+                </div>
+
+                <!-- Test Reports -->
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">Test Reports</h3>
+                    <p class="feature-description">
+                        Detailed HTML reports with results, screenshots, and failure videos
+                    </p>
+                    <ul class="feature-list">
+                        <li>HTML Reports</li>
+                        <li>Failure screenshots</li>
+                        <li>Execution videos</li>
+                        <li>Test traces</li>
+                    </ul>
+                    <a href="#" class="feature-link">View Reports →</a>
+                </div>
+
+                <!-- Bug Reports -->
+                <div class="feature-card">
+                    <div class="feature-icon">🐛</div>
+                    <h3 class="feature-title">Bug Reporting</h3>
+                    <p class="feature-description">
+                        Templates and examples of bug reports with all necessary information
+                    </p>
+                    <ul class="feature-list">
+                        <li>Bug templates</li>
+                        <li>Severity & Priority</li>
+                        <li>Steps to reproduce</li>
+                        <li>Screenshots & logs</li>
+                    </ul>
+                    <a href="docs/bug-report-template.md" class="feature-link">View Template →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="tech-stack">
+        <div class="container">
+            <h2 class="section-title">Tech Stack</h2>
+            <p class="section-description">Technologies and tools used in this project</p>
+            
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <div class="tech-logo">🎭</div>
+                    <h4>Playwright</h4>
+                    <p>E2E testing framework</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-logo">📘</div>
+                    <h4>TypeScript</h4>
+                    <p>Programming language</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-logo">🔄</div>
+                    <h4>GitHub Actions</h4>
+                    <p>CI/CD Pipeline</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-logo">📦</div>
+                    <h4>Node.js</h4>
+                    <p>Runtime environment</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-logo">🌐</div>
+                    <h4>HTML/CSS</h4>
+                    <p>Portfolio website</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-logo">⚙️</div>
+                    <h4>Multi-Env</h4>
+                    <p>QA & PROD support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">About This Project</h2>
+                <div class="about-text">
+                    <p>
+                        This project demonstrates comprehensive QA Automation skills, including:
+                    </p>
+                    <ul>
+                        <li>✅ Test strategy design and planning</li>
+                        <li>✅ Writing detailed test cases</li>
+                        <li>✅ Implementing automated tests with Playwright</li>
+                        <li>✅ Using design patterns (Page Object Model)</li>
+                        <li>✅ Multi-environment configuration (QA/PROD)</li>
+                        <li>✅ CI/CD pipeline setup with GitHub Actions</li>
+                        <li>✅ Report generation and documentation</li>
+                        <li>✅ Cross-browser testing (Chrome, Firefox, Safari)</li>
+                        <li>✅ Test data and environment management</li>
+                    </ul>
+                    <p>
+                        <strong>Application Under Test:</strong> 
+                        <a href="https://www.saucedemo.com" target="_blank">Sauce Demo (Swag Labs)</a>
+                    </p>
+                    <p>
+                        A demo e-commerce application ideal for practicing test automation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Interested in Seeing More?</h2>
+                <p>Check out the complete code and documentation on GitHub</p>
+                <div class="cta-buttons">
+                    <a href="https://github.com/hlperez07/hlperez-tae-portafolio" class="btn btn-primary" target="_blank">
+                        View Repository on GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/hlperez/" class="btn btn-outline" target="_blank">
+                        Connect on LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2026 Henry Perez (hlperez) - Test Automation Engineer</p>
+                </div>
+                <div class="footer-right">
+                    <a href="https://github.com/hlperez07" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/hlperez/" target="_blank">LinkedIn</a>
+                    <a href="mailto:hlperez@gmail.com">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

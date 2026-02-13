@@ -1,0 +1,54 @@
+{
+  "name": "hlperez-tae-portafolio",
+  "version": "1.0.0",
+  "description": "QA Automation Portfolio - Sauce Demo Testing Suite by Henry Perez",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:chrome": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:safari": "playwright test --project=webkit",
+    "test:all-browsers": "playwright test --project=chromium --project=firefox --project=webkit",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "test:qa": "ENV=qa playwright test",
+    "test:qa:smoke": "ENV=qa playwright test --grep @smoke",
+    "test:qa:regression": "ENV=qa playwright test --grep @regression",
+    "test:prod": "ENV=prod playwright test",
+    "test:prod:smoke": "ENV=prod playwright test --grep @smoke",
+    "test:prod:regression": "ENV=prod playwright test --grep @regression",
+    "test:auth": "playwright test tests/e2e/auth.spec.ts",
+    "test:cart": "playwright test tests/e2e/cart.spec.ts",
+    "test:checkout": "playwright test tests/e2e/checkout.spec.ts",
+    "report": "playwright show-report",
+    "report:allure": "allure generate allure-results --clean && allure open",
+    "clean": "rm -rf playwright-report test-results allure-results allure-report"
+  },
+  "keywords": [
+    "playwright",
+    "testing",
+    "automation",
+    "qa",
+    "e2e",
+    "typescript",
+    "test-automation-engineer"
+  ],
+  "author": "Henry Perez <hlperez@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hlperez07/hlperez-tae-portafolio"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.10.0",
+    "allure-playwright": "^2.15.0",
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
+}
